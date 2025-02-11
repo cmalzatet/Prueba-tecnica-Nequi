@@ -4,6 +4,18 @@ import pandas as pd
 import os
 import shutil
 
+
+# Crea carpetas
+os.makedirs("./errors")
+os.makedirs("./predictions")
+os.makedirs("./raw/train")
+os.makedirs("./raw/inference")
+os.makedirs("./processed/train")
+os.makedirs("./processed/inference")
+os.makedirs("./etl/train")
+os.makedirs("./etl/inference")
+
+
 now_str = datetime.now().strftime("%d_%m_%Y-%H_%M_%S")
 
 amazon_reviews = tarfile.open("./dataset/amazon_review_polarity_csv.tgz")

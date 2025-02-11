@@ -1,6 +1,6 @@
 # Instrucciones manejo
 
-Inicialmente, para la implementacion de esta prueba se hace uso de los datos de ([Amazon reviews](https://www.kaggle.com/datasets/kritanjalijain/amazon-reviews/data)). El archivo crudo se encuentra en **"./dataset/amazon_review_polarity_csv.tgz"**.  Esta base de datos consta de aproximadamente 1'800.000 muestras para entrenamiento y mas de 200.000 muestras para testeo. 
+Inicialmente, para la implementacion de esta prueba se hace uso de los datos de ([Amazon reviews](https://www.kaggle.com/datasets/kritanjalijain/amazon-reviews/data)). POR FAVOR DESCARGAR LOS DATOS DE TAL FORMA QUE QUEDEN EN LA SIGUIENTE DIRECCION **"./dataset/amazon_review_polarity_csv.tgz"**.  Esta base de datos consta de aproximadamente 1'800.000 muestras para entrenamiento y mas de 200.000 muestras para testeo. 
 
 Para mayor profundidad y detalles en los flujos de los procesos y diagramas
 
@@ -16,7 +16,7 @@ pip install -r requirements.txt
 python3 dataset_extraction.py
 ```
 
-Este script se encarga de descomprimir y organizar los datos originales. Para fines del ejemplo, la base de datos es distribuida así:
+Este script se encarga de crear las carpetas necesarias, descomprimir y organizar los datos originales. Para fines del ejemplo, la base de datos es distribuida así:
 - Del set de datos para entrenamiento, se toman 1'500.000 filas y se almacenan en **"/raw/train/<nombre_del_archivo>.csv"**. Este conjunto simulará un conjunto para el entrenamiento y prueba del modelo (se divide en sets de entrenamiento y prueba)
 - Por otro lado, al el set de prueba se le retiran las columnas dejando únicamente la columna de texto y es almacenada en **"/raw/inference/<nombre_del_archivo>.csv"**. El objetivo de este es simular un bache de textos a los cuales aplicar la predicción del modelo.
 
